@@ -1,0 +1,30 @@
+
+        <div class="row ">
+          <br>
+        
+     <div class="col-md-4 mx-auto"  ng-repeat="x in Subjects |limitTo:6:begin">
+          <div class="card card-primary mt-2 text-center">              
+              <div class="card-body">
+                  <img class="poly-prod" src="images/logos/{{x.Logo}}" >
+              </div>
+              <div class="card-footer text-white" style="background-color: #1fb299;"> <a href="#!quiz/{{x.Id}}/{{x.Name}}" style="color: white;">{{x.Name}} </a></div>
+          </div>
+     </div>
+    
+  </div>
+  <div class="mb-3 d-flex justify-content-between">
+    <div>
+        <button class="btn btn-outline-primary" ng-click="first()"><i class="fas fa-angle-double-left fa-2x"></i></button>
+        <button class="btn btn-outline-primary" ng-click="prev()"><i class="fas fa-angle-left fa-2x"></i></button>
+    </div>
+    <div class="align-self-center">
+        TRANG
+    </div>
+    <div>
+        <button class="btn btn-outline-primary" ng-click="next()"><i class="fas fa-angle-right fa-2x"></i></button>
+        <button class="btn btn-outline-primary" ng-click="last()"><i class="fas fa-angle-double-right fa-2x"></i></button>
+    </div>
+</div>
+     
+      
+      

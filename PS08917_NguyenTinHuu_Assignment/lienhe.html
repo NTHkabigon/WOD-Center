@@ -1,0 +1,67 @@
+        <section class="section">         
+            <div class="card card-cascade narrower">
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header mdb-color lighten-3">
+                <h5 class="mb-0">Contact us</h5>
+              </div>
+              <div class="card-body card-body-cascade">
+      
+                <!-- Google map -->
+                <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 700px">
+                  <iframe src="https://maps.google.com/maps?q=Miami&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                    style="border:0; height: 680px; width: 1006px; margin: auto;" allowfullscreen></iframe>
+                </div>
+      
+                <div class="row p-4">
+      
+                  <div class="col-lg-4">
+                    <div class="mt-3 text-lg-center text-sm-left font-balooda">
+                        <h3>
+                            
+                            <span class="text-primary">WOD</span><span class="text-dark">Center</span>
+
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                  <h4 class="text-dark mb-4 mt-4">Thông tin <span class="text-primary">liên hệ</span></h4>
+                  <div class="text-blue-grey darken-2">
+                      <p><i class="fas fa-map-marker-alt"></i> 56 Lê Thị Riêng, Phường 1, TP Cao Lãnh</p>
+                      <p><i class="fas fa-phone"></i> 0968896115</p>
+                      <p><i class="fas fa-envelope"></i> Huuntps08917@fpt.edu.vn</p>
+                  </div>
+                  
+                </div>
+                <div class="col-lg-4">
+                  <h4 class="text-dark mb-4 mt-4">Gửi <span class="text-primary">góp ý </span></h4>
+                  <div class="text-secondary">
+                      <form name="formFeedback" ng-submit="$scope.guiGopY()">
+                          <div class="form-group row mb-1">
+                              <div class="col-md-8">
+                                  <input required maxlength=75 type="email" class="form-control" name="email" ng-model="$scope.mail.email" placeholder="Email của bạn...">
+                                 
+                              </div>
+                              <label for="email" class="col-md-4 col-form-label"></label>
+                          </div>
+                          <div class="form-group row mb-1">
+                              <div class="col-md-8">
+                                  <textarea required type="text" minlength=5 maxlength=255 class="form-control" name="content" ng-model="$scope.mail.content" placeholder="Nội dung góp ý..."></textarea>
+                                  
+                              </div>
+                              <label for="content" class="col-md-4 col-form-label"></label>
+                          </div>
+                          <div class="form-group row mb-1">
+                              <div class="col-sm-8">
+                                  <button class="btn btn-primary" type="submit">Gửi</button>
+                              </div>
+                              <label for="submit" class="col-sm-4 col-form-label"></label>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+              </div>
+      
+            </div>
+      
+          </section>
+      

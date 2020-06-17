@@ -1,0 +1,66 @@
+        <div class="row"  ng-controller="logincontroller">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6">
+            <div
+              class="card border-primary border-top-sm border-bottom-sm card-authentication1 mx-auto my-5 animated bounceInDown">
+              <div class="card-body">
+                <div class="card-content p-2">
+                  <div class="card-title text-uppercase text-center py-3"> <strong>Sign in</strong> </div>
+                  <form name="loginform">
+                    <div class="form-group">
+                      <div class="position-relative has-icon-right">
+                        <label for="exampleInputUsername" class="sr-only">Username</label>
+                        <input type="text" name="username" ng-model="user.username" class="form-control form-control-rounded"
+                          placeholder="Username" required>
+                          <small ng-show="loginform.username.$invalid" id="name"
+                          class="form-text text-danger">Vui lòng nhập tên đăng nhập.</small>                          
+                        <div class="form-control-position">
+                          <i class="icon-user"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="position-relative has-icon-right">
+                        <label for="exampleInputPassword" class="sr-only">Password</label>
+                        <input type="password" name="password" ng-model="user.password" class="form-control form-control-rounded"
+                          placeholder="Password" required>
+                          <small ng-show="loginform.password.$invalid" id="name"
+                          class="form-text text-danger">Vui lòng nhập password.</small>
+                        <div class="form-control-position">
+                          <i class="icon-lock"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row mr-0 ml-0">
+                      <div class="form-group col-6">
+                        <div class="icheck-primary">
+                               <input type="checkbox" id="user-checkbox" checked="">
+                               <label for="user-checkbox">Remember me</label>
+                       </div>
+                      </div>
+                      <div class="form-group col-6 text-right">
+                       <a href="#!quenmatkhau">Forgot password</a>
+                      </div>
+                     </div>
+                    <button type="button"
+                      class="btn btn-primary shadow-primary btn-round btn-block waves-effect waves-light" ng-click='login()'>Sign
+                      In</button>
+                    <div class="text-center pt-3">
+                      <p>or Sign in with</p>
+                      <a href="#" class="btn-social btn-social-circle btn-facebook waves-effect waves-light m-1"><i
+                          class="fa fa-facebook"></i></a>
+                      <a href="#" class="btn-social btn-social-circle btn-google-plus waves-effect waves-light m-1"><i
+                          class="fa fa-google-plus"></i></a>
+                      <a href="#" class="btn-social btn-social-circle btn-twitter waves-effect waves-light m-1"><i
+                          class="fa fa-twitter"></i></a>
+                      <hr>
+                      <p class="text-muted">Do not have an account? <a href="#!dangky"> Sign Up
+                          here</a></p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"></div>
+        </div>

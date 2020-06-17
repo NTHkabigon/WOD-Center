@@ -1,0 +1,48 @@
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6">
+            <div
+              class="card border-primary border-top-sm border-bottom-sm card-authentication1 mx-auto my-5 animated bounceInDown">
+              <div class="card-body">
+                <div class="card-content p-2">
+                  <div class="card-title text-uppercase text-center pb-2"> <strong>Forgot Password </strong> </div>
+                  <p class="text-center pb-2">Please enter username and your email address. You will show your password.</p>
+                  <form name="resetpassword">
+                    <div class="form-group">
+                      <div class="position-relative has-icon-right">
+                        <label for="exampleInputEmailAddress" class="sr-only">Username</label>
+                        <input type="text" name="username" ng-model="user.username"
+                          class="form-control form-control-rounded" placeholder="Username" required>
+                        <small ng-show="resetpassword.username.$invalid" id="name" class="form-text text-danger">Vui
+                          lòng nhập tên đăng nhập.</small>
+                        <div class="form-control-position">
+                          <i class="icon-envelope-open"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="position-relative has-icon-right">
+                        <label for="exampleInputEmailAddress" class="sr-only">Email Address</label>
+                        <input type="text" name="email" ng-model="user.email" class="form-control form-control-rounded"
+                          placeholder="Email Address" required>
+                        <small ng-show="resetpassword.email.$invalid" id="name" class="form-text text-danger">Vui lòng
+                          nhập email.</small>
+                        <div class="form-control-position">
+                          <i class="icon-envelope-open"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button"
+                      class="btn btn-primary shadow-primary btn-round btn-block waves-effect waves-light mt-3" ng-click="reset()">Reset
+                      Password</button>
+                    <div class="text-center pt-3">
+                      <hr>
+                      <p class="text-muted">Return to the <a href="login.html"> Sign In</a></p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"></div>
+        </div>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>WOD Center</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <!-- Your custom styles (optional) -->
+    <style>
+
+    </style>
+</head>
+
+<body class="fixed-sn white-skin" ng-app="myapp">
+
+    <!--Main Navigation-->
+    <header>
+     
+       <div ng-include="'menu.html'"></div>
+
+    </header>
+
+    <!-- Main layout -->
+    <main>
+        <div ng-view></div>
+    </main>
+    <!-- Main layout -->
+
+    <!-- Footer -->
+    <footer class="page-footer pt-0 mt-5" ng-include="'footer.html'">
+
+        <!-- Copyright -->
+
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <!-- Footer -->
+
+
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+    <script src="js/mdb.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+
+</body>
+<script>
+    var app = angular.module('myapp', ["ngRoute"]);
+   
+    app.config(function($routeProvider) {
+        $routeProvider
+            .when("/khoahoc", {
+                templateUrl: 'khoahoc.html?' + Math.random(),
+                controller: 'khoahoccontroller'
+            })
+            .when("/gioithieu", {
+                templateUrl: 'gioithieu.html?' + Math.random()
+            })
+            .when("/lienhe", {
+                templateUrl: 'lienhe.html?' + Math.random()
+            })
+            .when("/thaoluan", {
+                templateUrl: 'thaoluan.html?' + Math.random()
+            })
+            .when("/dangnhap", {
+                templateUrl: 'login.html?' + Math.random()
+            })
+            .when("/dangky", {
+                templateUrl: 'signup.html?' + Math.random(),
+                controller: 'dangky'
+            })
+            .when("/dangxuat", {
+                templateUrl: 'index.html?' + Math.random(),
+            })
+            .when("/doimatkhau", {
+                templateUrl: 'doimk.html?' + Math.random(),
+                controller: 'doimatkhau'
+            })
+            .when("/index", {
+                templateUrl: 'index.html?' + Math.random()
+            })
+            .when("/quiz/:id/:name", {
+                templateUrl: 'quiz.html?' + Math.random(),
+                controller: 'quizcontroller'
+            })
+            .when("/quenmatkhau", {
+                templateUrl: 'quenmk.html?' + Math.random(),
+                controller: 'resetcontroller'
+            })
+            .when("/thongtin", {
+                templateUrl: 'thongtintk.html?' + Math.random(),
+                controller: 'thongtincontroller'
+            })
+            .otherwise({
+                templateUrl: 'index.html?' + Math.random()
+            })
+
+    });
+   
+</script>
+<script src="js/menu.js"></script>
+<script src="js/khoahoc.js"></script>
+<script src="js/login.js"></script>
+<script src="js/quenmk.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/thongtintaikhoan.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/signup.js"></script>
+<script src="js/doimatkhau.js"></script>
+
+</html>

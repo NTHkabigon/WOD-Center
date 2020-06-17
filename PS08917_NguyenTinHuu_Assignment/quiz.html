@@ -1,0 +1,42 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-sm-9 mx-auto">
+                <span class="font-weight-bold " style="font-size: 20px;">{{name}}</span>
+            </div>
+            <div class="col-sm-3">
+                <span class="badge badge-primary" ng-hide="dongho" style="font-size: 20px;"> {{time}}</span>
+                <span class="badge badge-danger" ng-show="dongho" style="font-size: 20px;"> Đã hoàn thành</span>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div ng-repeat="quiz in quizs |limitTo:1:begin">
+            <div class="alert alert-info">
+                {{begin+1}}. {{quiz.Text}}
+            </div>
+            <div ng-repeat="ans in quiz.Answers">
+                <div class="custom-control custom-radio">
+                    <input ng-click="tinh_diem(quiz.Marks, quiz.AnswerId, ans.Id)" name="{{quiz.Id}}" id="{{ans.Id}}" type="radio" class="custom-control-input" value="{{ans.Id}}">
+                    <label class="custom-control-label" for="{{ans.Id}}">{{ans.Text}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer font-weight-bold">
+        <div class="mb-3 d-flex justify-content-between">
+            <div>
+                <button class="btn btn-outline-primary" ng-click="first()"><i class="fas fa-angle-double-left fa-2x"></i></button>
+                <button class="btn btn-outline-primary" ng-click="prev()"><i class="fas fa-angle-left fa-2x"></i></button>
+            </div>
+            <div class="align-self-center">
+                TRANG
+            </div>
+            <div>
+                <button class="btn btn-outline-primary" ng-click="next()"><i class="fas fa-angle-right fa-2x"></i></button>
+                <button class="btn btn-outline-primary" ng-click="last()"><i class="fas fa-angle-double-right fa-2x"></i></button>
+            </div>
+        </div>
+        <button type="button" ng-click="xemdiem()" ng-disabled="dongho" class="btn btn-success">Kết thúc bài học</button>
+    </div>
+</div>

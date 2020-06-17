@@ -1,0 +1,51 @@
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark  aqua-gradient">
+  <a class="navbar-brand" href="#"><strong style="font-style:inherit; font-weight: bold; color: #eceff1"> WOD Center</strong> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+    <ul class="navbar-nav mr-auto pl-3">
+      <li class="nav-item">
+        <a class="nav-link" href="#!khoahoc"> <i class="fas fa-book-open"></i>Khóa học</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#!gioithieu"> <i class="fas fa-credit-card"></i>Giới thiệu</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!lienhe"><i class="fas fa-headset"></i>Liên hệ</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#!thaoluan"><i class="fas fa-comments"></i>Thảo luận</a>
+        </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"><i class="fas fa-list"></i> Danh sách quiz
+        </a>
+        <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555" ng-controller="menucontroller">
+          <a  class="dropdown-item" ng-repeat="x in Subjects" href="#!quiz/{{x.Id}}/{{x.Name}}" >{{x.Name}} </a>
+          
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-5 pr-3 nav-flex-icons">        
+      <li class="nav-item avatar dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <img src="images/avt.png" class="rounded-circle z-depth-0"
+            alt="avatar image">
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+          aria-labelledby="navbarDropdownMenuLink-55">
+          <a class="dropdown-item" ng-click="logout()" ng-show="status" href="#!dangxuat">Đăng xuất</a>
+          <a class="dropdown-item" ng-hide="status" href="#!dangnhap">Đăng nhập</a>
+          <a class="dropdown-item" href="#!dangky">Đăng ký</a>
+          <a class="dropdown-item" ng-show="status" href="#!doimatkhau">Đổi mật khẩu</a>
+          <a class="dropdown-item" ng-hide="status" href="#!quenmatkhau">Quên mật khẩu</a>
+          <a class="dropdown-item" ng-show="status" href="#!thongtin">Thông tin tài khoản</a>
+          
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>  
